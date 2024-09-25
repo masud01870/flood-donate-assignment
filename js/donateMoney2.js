@@ -15,23 +15,25 @@ document.getElementById('donate-btn-two').addEventListener('click', function(eve
 
     const div = document.createElement('div')
     div.classList.add('mb-4')
-    div.classList.add('w-11/12', 'space-y-2', 'mx-auto', 'card-border', 'rounded-xl');
+    div.classList.add('w-11/12', 'space-y-2', 'mx-auto', 'p-2', 'card-border', 'rounded-xl');
     div.innerHTML = `
-    <h3 class="pl-3 text-xl text-start font-semibold">${donateInputTwo} Taka Donate for Flood Relief in Feni,Bangladesh
+    <h3 class="text-xl text-start font-semibold">${donateInputTwo} Taka Donate for Flood Relief in Feni,Bangladesh
     </h3>
-    <h3 class="pl-3 font-light mb-2">${new Date().toLocaleDateString()}
+    <h3 class="font-light mb-2">Date: ${new Date().toString()}
     </h3>
     
     `;
 
     document.getElementById('transection-section').appendChild(div);
 
-    // Decrease 
+    // Decrease money
 
     const decreaseMoneyTwo = decreaseBalanceValueById('decrease-money');
 
     const newDecreaseMoneyTwo = decreaseMoneyTwo - donateInputTwo;
     document.getElementById('decrease-money').innerText = newDecreaseMoneyTwo;
+
+    document.getElementById('donate-input-two').value = '';
 
     // Modal
     document.getElementById('my_modal_1').showModal();

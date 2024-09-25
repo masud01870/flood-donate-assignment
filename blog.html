@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Daisy Ui and Tailwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Css link -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header class="nav-bg pt-2 pb-10 lexend-font">
+        <!-- Navber -->
+        <nav class="w-11/12 mx-auto">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <a class="btn bg-color text-xl px-6" href="index.html">Home</a>
+                </div>
+                <div class="navbar-center flex gap-3">
+                    <img src="./assets/logo.png" alt="">
+                    <h2 class="text-2xl hidden lg:flex font-bold">Donate Bangladesh</h2>
+                </div>
+                <div class="navbar-end gap-2">
+                    <img src="./assets/coin.png" alt="">
+                    <h3><span id="decrease-money">5500</span> BDT</h3>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="w-11/12 mx-auto mt-16">
+        <div class="flex justify-start items-center gap-3 mb-4">
+            <h2 class="text-3xl font-extrabold">Important FAQ </h2>
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/ask-question--v1.png"
+                alt="ask-question--v1" />
+        </div>
+        <!-- Accordion -->
+        <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is DOM full form?</div>
+                <div class="collapse-content">
+                    <p>Document Object Model (DOM)</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">What is DOM useful for?</div>
+                <div class="collapse-content">
+                    <p>Application programming interface for well-defined HTML and XML structures.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">How DOM is working?</div>
+                <div class="collapse-content">
+                    <p>DOM methods allow programmatic access to the tree.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

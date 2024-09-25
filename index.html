@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flood Donate Money</title>
+    <title>Flood Donate Money</title> 
     <!-- Daisy Ui and Tailwind css link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,13 +16,13 @@
     <header class="nav-bg pt-2 pb-10">
         <!-- Navber -->
         <nav class="w-11/12 mx-auto">
-            <div class="navbar ">
+            <div class="navbar">
                 <div class="navbar-start">
-                    <a class="btn bg-color text-xl px-6">Blog</a>
+                     <a class="btn bg-color text-xl px-6" href="blog.html">Blog</a>
                 </div>
                 <div class="navbar-center flex gap-3">
                     <img src="./assets/logo.png" alt="">
-                    <h2 class="text-2xl font-bold">Donate Bangladesh</h2>
+                    <h2 class="text-2xl hidden lg:flex font-bold">Donate Bangladesh</h2>
                 </div>
                 <div class="navbar-end gap-2">
                     <img src="./assets/coin.png" alt="">
@@ -32,15 +32,15 @@
         </nav>
     </header>
     <!-- Main section -->
-    <main class="w-11/12 mx-auto mb-36">
-        <div class="flex justify-center gap-4 mt-12 mb-8">
+    <main class="w-11/12 mx-auto mb-24">
+        <div class="flex justify-center gap-6 mt-12 mb-8">
             <button id="donation-button" class="btn bg-color text-blacker px-6 text-xl font-semibold">Donation</button>
-            <button id="history-button" class="btn text-gray px-8 text-xl font-medium">History</button>
+            <button id="history-button" class="btn text-gray px-6 text-xl font-medium">History</button>
         </div>
         <!-- card-1 -->
         <section id="donation-section" class="space-y-6">
-            <div class="flex gap-10 card-border p-8 rounded-2xl">
-                <div>
+            <div class="lg:flex lg:gap-10 card-border p-8 rounded-2xl grid grid-cols-1">
+                <div class="mb-6 lg:mb-0">
                     <img src="./assets/noakhali.png" alt="">
                 </div>
                 <div>
@@ -62,8 +62,8 @@
                 </div>
             </div>
             <!-- card-2 -->
-            <div class="flex gap-10 card-border p-8 rounded-2xl">
-                <div>
+            <div class="lg:flex lg:gap-10 card-border p-8 rounded-2xl grid grid-cols-1">
+                <div class="mb-6 lg:mb-0">
                     <img src="./assets/feni.png" alt="">
                 </div>
                 <div>
@@ -87,8 +87,8 @@
                 </div>
             </div>
             <!-- card-3 -->
-            <div class="flex gap-10 card-border p-8 rounded-2xl">
-                <div>
+            <div class="lg:flex lg:gap-10 card-border p-8 rounded-2xl grid grid-cols-1">
+                <div class="mb-6 lg:mb-0">
                     <img src="./assets/quota-protest.png" alt="">
                 </div>
                 <div>
@@ -122,8 +122,8 @@
     <!-- Modal Start-->
     <button class="btn hidden" onclick="my_modal_1.showModal()">Donate Now</button>
     <dialog id="my_modal_1" class="modal">
-        <div class="modal-box text-center">
-            <h2 class="text-3xl mb-2 font-bold">Congrates!</h2>
+        <div class="modal-box text-center modal-bg">
+            <h2 class="text-4xl mb-2 font-bold">Congrates!</h2>
             <div class="flex items-center justify-center">
                 <img src="./assets/coin.png" alt="">
             </div>
@@ -131,7 +131,7 @@
             <h3 class="text-xl font-semibold mt-3">Successfully</h3>
             <div class="modal-action justify-center">
                 <form method="dialog">
-                    <button class="btn">close confirmation</button>
+                    <button class="btn bg-color">Close Confirmation</button>
                 </form>
             </div>
         </div>

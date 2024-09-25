@@ -12,6 +12,7 @@
   }
 
   .bg-color {
+    border: none;
     background-color: rgb(180, 244, 97);
   }
 
@@ -25,4 +26,8 @@
 
   .text-gray {
     color: rgba(17, 17, 17, 0.7);
+  }
+
+  .modal-bg {
+    background-color: rgb(230, 224, 217);
   }

@@ -7,9 +7,6 @@ document.getElementById('donate-btn').addEventListener('click', function(event){
     //     alert('please donate valid amount');
     //     return;
     // }
-
-    
-    
     
     const donateInput = getInputValueById('donate-input');
     const balanceMoney = getDonateBalanceValueById('balance-money')
@@ -27,17 +24,16 @@ document.getElementById('donate-btn').addEventListener('click', function(event){
     }
     
     
-    
     const newBalance = donateInput + balanceMoney;
     document.getElementById('balance-money').innerText = newBalance;
 
     const div = document.createElement('div')
     div.classList.add('mb-4')
-    div.classList.add('w-11/12', 'space-y-2', 'mx-auto', 'card-border', 'rounded-xl');
+    div.classList.add('w-11/12', 'space-y-2', 'mx-auto', 'p-2', 'card-border', 'rounded-xl');
     div.innerHTML = `
-    <h3 class="pl-3 text-xl text-start font-semibold">${donateInput} Taka is Donated for famine-2024 at Feni, Bangladesh
+    <h3 class="text-xl text-start font-semibold">${donateInput} Taka is Donated for famine-2024 at Feni, Bangladesh
     </h3>
-    <h3 class="pl-3 font-light mb-2">${new Date().toLocaleDateString()}
+    <h3 class="font-light mb-2">Date: ${new Date().toString()}
     </h3>
     
     `;
@@ -57,6 +53,8 @@ document.getElementById('donate-btn').addEventListener('click', function(event){
 
     const newDecreaseMoney = balanceDecreaseMoney - donateInput;
     document.getElementById('decrease-money').innerText = newDecreaseMoney;
+
+    document.getElementById('donate-input').value = '';
 
     // Modal
     document.getElementById('my_modal_1').showModal();
