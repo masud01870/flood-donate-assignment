@@ -2,22 +2,20 @@ document.getElementById('donate-btn-two').addEventListener('click', function(eve
     event.preventDefault();
 
     const donateInputTwo = getInputValueById('donate-input-two')
+    document.getElementById('donate-input-two').value = '';
     
     const donateMoneyTwo = getDonateBalanceValueById('balance-money-two')
 
     if(donateInputTwo <= 0 || isNaN(donateInputTwo)){
-        alert('please donate valid amount');
+        alert("Please donate valid amount.");
         return;
     }
-
-    const newBalanceTwo = donateInputTwo + donateMoneyTwo;
-    document.getElementById('balance-money-two').innerText = newBalanceTwo;
 
     const div = document.createElement('div')
     div.classList.add('mb-4')
     div.classList.add('w-11/12', 'space-y-2', 'mx-auto', 'p-2', 'card-border', 'rounded-xl');
     div.innerHTML = `
-    <h3 class="text-xl text-start font-semibold">${donateInputTwo} Taka Donate for Flood Relief in Feni,Bangladesh
+    <h3 class="text-xl text-start font-semibold">${donateInputTwo} Taka is Donate for Flood Relief in Feni,Bangladesh
     </h3>
     <h3 class="font-light mb-2">Date: ${new Date().toString()}
     </h3>
@@ -30,10 +28,17 @@ document.getElementById('donate-btn-two').addEventListener('click', function(eve
 
     const decreaseMoneyTwo = decreaseBalanceValueById('decrease-money');
 
-    const newDecreaseMoneyTwo = decreaseMoneyTwo - donateInputTwo;
-    document.getElementById('decrease-money').innerText = newDecreaseMoneyTwo;
+    if((donateInputTwo > decreaseMoneyTwo)){
+        alert("Sorry, You don't have enough balance.")
+        return;
+    }
 
-    document.getElementById('donate-input-two').value = '';
+    const newBalanceTwo = donateInputTwo + donateMoneyTwo;
+
+    const newDecreaseMoneyTwo = decreaseMoneyTwo - donateInputTwo;
+
+    document.getElementById('balance-money-two').innerText = newBalanceTwo;
+    document.getElementById('decrease-money').innerText = newDecreaseMoneyTwo;
 
     // Modal
     document.getElementById('my_modal_1').showModal();
